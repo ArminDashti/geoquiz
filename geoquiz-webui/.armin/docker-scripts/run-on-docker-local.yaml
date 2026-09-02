@@ -1,0 +1,12 @@
+# Local deploy settings - scripts read this file only (no CLI -- flags).
+
+stack_name: geoquiz
+image_tag: geoquiz-webui:latest
+compose_file: ../../docker-compose.yml
+dockerfile: ../../Dockerfile
+docker_network: t3-net
+internal_port: "80"
+publish_port: "8095"
+vite_api_base_url: "http://localhost:8094"
+delete_volume: "no"
+delete_image: "yes"

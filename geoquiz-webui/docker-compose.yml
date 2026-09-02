@@ -1,0 +1,16 @@
+name: geoquiz
+
+services:
+  geoquiz-webui:
+    image: ${IMAGE_TAG:-geoquiz-webui:latest}
+    container_name: geoquiz-webui
+    expose:
+      - "80"
+    networks:
+      - t3-net
+    restart: "no"
+
+networks:
+  t3-net:
+    name: ${DOCKER_NETWORK:-t3-net}
+    external: true
